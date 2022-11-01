@@ -1,0 +1,626 @@
+/* styles for boxes and main */
+
+            /*body{
+                margin:0px;
+                background: #616161;
+                position: relative;*/
+body{
+    background-color: #262839;
+    overflow-x: hidden;
+}
+.index{
+    animation: change 10s;
+    background-color: #262839;
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@keyframes change{
+    0%{background-color: #616161;}
+    100%{background-color: #262839;}
+}
+            #main{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            #box1{
+                width: 900px;
+                height: 800px;
+                background-image: url('tsun.png');
+                position: absolute;
+                bottom: -100%;
+                transition-timing-function: linear;
+                animation: anim 2s forwards, anim2 3s forwards 3s;
+                animation-direction: forwards;
+            }
+            #box12{
+                content: '';
+                position: absolute;
+                width: 900px;
+                height: 800px;
+                background-image: url('pmoon.png');
+                right: -100%;
+                animation: moon 3s forwards 3s;
+            }
+            /*@keyframes anim{
+                from{
+                    bottom: -100%;
+                }
+                to{
+                    bottom: 0%;
+                }
+            }
+            @keyframes anim2{
+                from{
+                    left: 30%;
+                    width: 530px;
+                }
+                to{
+                    width: 0px;
+                    left: 50%;
+                }
+            }*/
+@keyframes anim{
+  0%   {background-image: url('images/tsun.png'); bottom: -100%;}
+  100%  {background-image: url('images/tsun.png'); bottom: 0%;}
+}
+@keyframes anim2{
+    0%{background-image: url('images/tsun.png'); bottom: 0%; left: 30%; width: 530px;}
+    /*25% {background-image: url('images/tsun.png'); left: 30%; width: 530px;}
+    50% {background-image: url('images/tsun.png'); left: 50%; width: 530px;}*/
+    100% {background-image: url('images/tsun.png'); bottom: 0%; left: 100%; width: 530px}
+}
+@keyframes moon{
+    0% {background-image: url('images/pmoon.png'); right: -100%;}
+    50% {background-image: url('images/pmoon.png'); right: -30%;}
+    100% {background-image: url(images/pmoon.png); left: 10%; width: 0px;}
+}
+            #box2{
+                width: 50%;
+                height: auto;
+                font-family: 'Indie Flower', cursive;
+                color: #FFFFFF;
+                font-size:9em;
+                font-weight: 550;
+                line-height: 150px;
+                position: absolute;
+                top:250px;
+                left: 100px;
+                overflow: hidden;
+            }
+            #text{
+                position: relative;
+                left: -100%;
+                animation: anim3 1s forwards 2s;
+            }
+            @keyframes anim3{
+                from{
+                    left: -100%;
+                }
+                to{
+                    left: 0%;
+                }
+            }
+            #box3{
+                overflow: hidden;
+            }
+            #container{
+                width: 100%;
+                position: absolute;
+                top: -100%;
+                animation: anim4 1s forwards 1s;
+            }
+            #logo{
+                float: left;
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+            #logo img{
+                width: 100px;
+                height: 100px;
+            }
+            #menu{
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 14px;
+                color: white;
+                letter-spacing: 2px;
+                margin-right: 150px;
+                margin-top: 20px;
+                float:right;
+            }
+            #menu a{
+            color: white;
+            text-decoration: none;
+            }
+            #menu a:hover{
+            color: darkgrey;
+            }
+            #menu ul{
+                list-style: none;
+             
+            }
+            #menu ul li{
+                display: inline-block;
+                margin-left: 100px;
+                
+            }
+            @keyframes anim4{
+                from{
+                    top: -100px;
+                }
+                to{
+                    top: 0%
+                }
+            }
+#box4{
+    width: 450px;
+    height: 250px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: darkgrey;
+    font-size:2em;
+    font-weight: 500;
+    line-height: 50px;
+    position: relative;
+    top:600px;
+    left: 100px;
+    overflow: hidden;
+    text-align: justify;
+    text-align-last: justify;
+    margin: 40px 0px;
+    
+}
+
+/* little description bit */
+
+ #text4{
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 3s;
+    border-left: solid darkgrey;
+    padding-left: 10px;
+    width: 10.5em;
+}
+
+/* right circle box */
+
+#box{
+    width: 500px;
+    height: 800px;
+    background-image: url('images/purple.png');
+    position: absolute;
+    right: 0%;
+    animation: anim5 8s forwards;
+    top: -100%;
+    backface-visibility: visible;
+}
+@keyframes anim5{
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0%;
+    }
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+/*cloud styles */
+ 
+#box5{
+      position: absolute;
+      width: 970px;
+      height: 800px;
+      background-image: url('clouds1.png');
+      right: -100%;
+      top: -60%;
+      animation-name: clouds;
+      animation-duration: 4s;
+      animation-delay: 7s;
+      animation-iteration-count: infinite;
+    
+}
+
+@keyframes clouds{
+        0% {right: -100%; bottom: auto;}
+        100% {right: 50%; bottom: auto;}
+}
+
+#box6{
+    position: absolute;
+      width: 970px;
+      height: 800px;
+      background-image: url('clouds1.png');
+      right: -100%;
+      top: 10%;
+      animation-name: clouds2;
+      animation-duration: 4s;
+      animation-delay: 2.5s;
+      animation-iteration-count: infinite;
+}
+
+@keyframes clouds2{
+        0% {right: -100%; bottom: auto;}
+        100% {right: 50%; bottom: auto;}
+}
+
+/*contact styles*/
+
+h1{
+    color: #444f6B;
+    font-size: 22em;
+    margin-top: 100px;
+    margin-bottom: auto;
+    font-family: 'Rajdhani', sans-serif;
+    animation-name: con;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    position: relative;
+}
+@keyframes con{
+    0%{right: -100%; bottom: auto;}
+    100%{right: 0%; bottom: auto;}
+}
+form{
+   height: 175px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+}
+input#des{
+    width: 440px;
+    height: 185px;
+    text-align: left;
+    vertical-align: text-top;
+    word-wrap: normal;
+    float: right;
+    position: relative;
+    top: -129.9%
+}
+label#des{
+    position: relative;
+    top: -128%;
+    left: 9.5%
+}
+legend{
+    color: #5f5f7b;
+    font-size: 2em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+.contactform{
+    border-color: #5f5f7b;
+    border-style: solid;
+    border-width: 1em;
+    color: lightgray;
+    width: 880px;
+    height: 350px;
+    position: relative;
+    right: -40%;
+    top: -40em;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    animation-name: form;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+}
+@keyframes form{
+    0%{right: 40%; bottom: auto;}
+    100%{right: -40%; bottom: auto;}
+}
+input{
+    background-color: #444f68;
+    border-style: solid;
+    border-color: #5e6a85;
+    word-wrap: normal;
+    color: lightgray;
+    height: 30px;
+    width: 25em;
+}
+/*#des{
+    width: 170px;
+    height: 100px;
+    text-align: left;
+    vertical-align: text-top;
+    word-wrap: normal;
+    float: right;
+}*/
+.btn{
+    background-color: lightgray;
+    color: black;
+    width: 80px;
+    margin-top: 11px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 30px;
+    border-style: solid;
+    border-color: darkgray;
+    border-radius: 23px;
+    position: relative;
+    left: 67%;
+    text-decoration: none;
+    margin-right: 0;
+    font-family: 'Rajdhani', sans-serif; 
+    top: 25%;
+}
+.btn a{
+    text-decoration: none;
+    color: #5e6a85;
+    font-weight: bold;
+    font-size: 2em;
+}
+.btn:hover{
+    background-color: darkgray;
+}
+.form{
+   
+    position: relative;
+    left: 50%;
+    bottom: 30%;
+    width: 40em;
+    height: 20em;
+    font-family: 'Rajdhani', sans-serif;
+}
+.earth img{
+    left: 8%;
+    height: 40em;
+    position: relative;
+}
+.earth{
+    width: 400px;
+    position: relative;
+    left: 4%;
+    bottom: -15em;
+    margin: 0;
+    animation-name: ear;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+}
+@keyframes ear{
+    0%{bottom: -100em; left: 4%;}
+    100%{bottom: -15em; left: 4%;}
+}
+
+/*thank you screen styles*/
+.you{
+    position: absolute;
+    text-align: center;
+    left: 23em;
+    animation-name: ty;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+}
+@keyframes ty{
+    0%{left: 23em; top: -100em;}
+    100%{left: 23em; top: 0em;}
+}
+.you img{
+    width: 80em;
+}
+.back a{
+    color: lightslategray;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Rajdhani', sans-serif;
+}
+.back a:hover{
+    color: lightpink;
+}
+.back{
+    position: relative;
+    text-align: center;
+    top: 33em;
+    animation-name: bth;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+}
+@keyframes bth{
+    0%{top: 100em;}
+    100%{top: 33em;}
+}
+
+/* portfolio styles */
+
+#boxp{
+    background-color: #8d748f;
+    width: 45em;
+    height: 45em;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    border-radius: 35px;
+    position: relative;
+    left: 50%;
+    text-align: center;
+    animation-name: p;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+}
+@keyframes p{
+    0%{ left: 120%;}
+    100%{ left: 50%;}
+}
+#boxsw{
+    color: #ffffff;
+    font-size: 8em;
+    position: relative;
+    bottom: 6.5em;
+    left: 4%;
+    font-family: 'Roboto Condensed', sans-serif;
+    animation-name: sw;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+@keyframes sw{
+    0%{ left: 4%; bottom: 100em;}
+    100%{left: 4%; bottom: 6.5em;}
+}
+#boxmc{
+    position: relative;
+    bottom: 49em;
+    animation-name: mc;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+} 
+@keyframes mc{
+    0%{bottom: -100em;}
+    100%{bottom: 49em;}
+}
+#boxp p{
+    color: #a78fa8;
+    position: relative;
+    top: 13em;
+    font-size: 1.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* loading styles */
+
+/* about styles */
+
+habt{
+    color: white;
+    font-size: 8em;
+    position: relative;
+    left: 14.5%;
+    top: 1.8em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+p{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.8em;
+}
+#abtpme{
+    position: relative;
+    left: 55%;
+    bottom: 41em;
+}
+#abtpme img{
+    width: 32%;
+}
+#abthey{
+    position: relative;
+    left: 2%;
+    text-align: center;
+    background-color: #434256;
+    top: 23em;
+    width: 50em;
+    height: 10em;
+    padding: 1em;
+    border-radius: 35px;
+}
+#abtgms{
+    background-color: #434256;
+    border-radius: 35px;
+    width: 50em;
+    height: 16em;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 46em;
+}
+#abtrando{
+    background-color: #434256;
+    border-radius: 35px;
+    width: 50em;
+    height: 18em;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    left: 2%;
+    top: 60em;
+}
+#abt10{
+    color: white;
+    text-align: left;
+    width: 50em;
+    left: 2%;
+    font-size: 2em;
+    position: relative;
+}
+/*footer styles */
+
+.footer{
+    padding: 1em;
+    background-color: #434256;
+    text-align: right;
+    padding-right: 17em;
+    margin: 0;
+}
+
+.ifooter{
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #434256;
+    text-align: right;
+    padding-right: 17em;
+    margin-top: auto;
+    animation-name: ifooter;
+    animation-duration: 10s;
+}
+@keyframes ifooter{
+    0% {background-color: #7f6e60;}
+    100% {background-color: #434256;}
+}
+.footer i{
+    color: #ffffff;
+    font-size: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.ifooter i{
+    color: #ffffff;
+    font-size: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.footer li{
+    display: inline;
+    text-decoration: none;
+}
+
+.ifooter li{
+    display: inline;
+    text-decoration: none;
+}
+.footer a i:hover{
+    color: darkgrey;
+}
+
+.ifooter a i:hover{
+    color: darkgrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
