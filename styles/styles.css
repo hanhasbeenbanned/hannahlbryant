@@ -486,7 +486,7 @@ habt{
     position: relative;
     left: 14.5%;
     top: 1.8em;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
 }
 #abthey p{
@@ -507,7 +507,7 @@ habt{
 #abtpme{
     position: relative;
     left: 55%;
-    bottom: 41em;
+    bottom: 70em;
 }
 #abtpme img{
     width: 32%;
@@ -548,10 +548,31 @@ habt{
 #abt10{
     color: white;
     text-align: left;
-    width: 50em;
-    left: 2%;
-    font-size: 2em;
+    width: 18em;
+    height: 17.5em;
+    left: 4%;
+    font-size: 1.9em;
     position: relative;
+    bottom: 2em;
+    text-align: center;
+    background-color: #8d748f;
+    border-radius: 35px;
+    padding: .5em;
+    padding-bottom: 1em;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+h10{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+h210 a{
+    text-decoration: none;
+    color: rebeccapurple;
+    font-style: italic;
+}
+h210 a:hover{
+    color: plum;
 }
 /*footer styles */
 
