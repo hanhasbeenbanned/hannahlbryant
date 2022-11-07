@@ -484,8 +484,8 @@ habt{
     color: white;
     font-size: 8em;
     position: relative;
-    left: 14.5%;
-    top: 1.8em;
+    left: 14%;
+    top: 1.6em;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
 }
@@ -574,6 +574,69 @@ h210 a{
 h210 a:hover{
     color: plum;
 }
+
+/*skills styles*/ 
+
+.skill{
+    width: 500px;
+    margin: 60px auto;
+    padding: 20px;
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+.bar{
+    background: #444f6B;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.2);
+    transition: all 0.3 cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+}
+.html{
+    width: 90%;
+    animation: html 3s;
+}
+.css{
+    width: 70%;
+    animation: css 3s;
+}
+.php{
+    width: 45%;
+    animation: php 3s;
+}
+.java{
+    width: 60%;
+    animation: java 3s;
+}
+@keyframes html{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+@keyframes css{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+@keyframes php{
+    0%{width: 0%;}
+    100%{width: 45%;}
+}
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
 /*footer styles */
 
 .footer{
