@@ -45,24 +45,38 @@ body{
                 right: -100%;
                 animation: moon 3s forwards 3s;
             }
-            /*@keyframes anim{
-                from{
-                    bottom: -100%;
-                }
-                to{
-                    bottom: 0%;
-                }
+       #box1{
+                 width: 900px;
+                height: 800px;
+                background-image: url('tsun.png');
+                position: absolute;
+                bottom: -100%;
+                animation-name: example;
+                animation-duration: 4s;
+            
             }
-            @keyframes anim2{
-                from{
-                    left: 30%;
-                    width: 530px;
-                }
-                to{
-                    width: 0px;
-                    left: 50%;
-                }
-            }*/
+@keyframes example {
+  0%   {left:0px; bottom:-100%;}
+  50%  {left:0px; bottom:0%;}
+  100% {left:100%; bottom:0%;}
+}
+            #box12{
+                position: absolute;
+                width: 900px;
+                height: 800px;
+                background-image: url('pmoon.png');
+                right: -100%;
+                animation-name: moon;
+                animation-duration: 4s;
+                animation-delay: .5s;
+            }
+            @keyframes moon {
+                0% {right: -100%; bottom: auto;}
+                100% {right: 50%; bottom: auto;}
+            }
+#box13 img{
+    width: 0em;
+}
 @keyframes anim{
   0%   {background-image: url('images/tsun.png'); bottom: -100%;}
   100%  {background-image: url('images/tsun.png'); bottom: 0%;}
@@ -73,11 +87,7 @@ body{
     50% {background-image: url('images/tsun.png'); left: 50%; width: 530px;}*/
     100% {background-image: url('images/tsun.png'); bottom: 0%; left: 100%; width: 530px}
 }
-@keyframes moon{
-    0% {background-image: url('images/pmoon.png'); right: -100%;}
-    50% {background-image: url('images/pmoon.png'); right: -30%;}
-    100% {background-image: url(images/pmoon.png); left: 10%; width: 0px;}
-}
+
             #box2{
                 width: 50%;
                 height: auto;
@@ -248,11 +258,12 @@ main{
         100% {right: 50%; bottom: auto;}
 }
 
+
 /*contact styles*/
 
 h1{
     color: #444f6B;
-    font-size: 22em;
+    font-size: 20em;
     margin-top: 100px;
     margin-bottom: auto;
     font-family: 'Rajdhani', sans-serif;
@@ -306,6 +317,8 @@ legend{
     animation-name: form;
     animation-duration: 2.5s;
     animation-delay: 0s;
+    margin: 8em;
+    margin-right: 10em;
 }
 @keyframes form{
     0%{right: 40%; bottom: auto;}
@@ -366,14 +379,13 @@ input{
 }
 .earth img{
     left: 8%;
-    height: 40em;
+    height: 35em;
     position: relative;
 }
 .earth{
     width: 400px;
     position: relative;
     left: 4%;
-    bottom: -15em;
     margin: 0;
     animation-name: ear;
     animation-duration: 2.5s;
@@ -711,8 +723,8 @@ hm{
 
 .ifooter{
     z-index: 1;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
     bottom: 0;
     padding: 1rem;
     background-color: #434256;
@@ -754,6 +766,111 @@ hm{
 
 .ifooter a i:hover{
     color: darkgrey;
+}
+
+
+/*phone styles */
+
+@media (max-width: 412px){
+    #box1 img{
+        position: relative;
+        width: 64em;
+        animation-name: sunmob;
+        animation-duration: 3s;
+    }
+    @keyframes sunmob{
+        0%{right: 20em; bottom: 200%;}
+        100%{right: 20em; bottom: -100%;}
+    }
+    #box12 img{
+      width: 0em;
+        
+    }
+    #box13 img{
+        position: relative;
+        width: 40em;
+        right: 7.6em;
+        bottom: 3em;
+        animation-name: moonmob;
+        animation-duration: 5s;
+    }
+    @keyframes moonmob{
+        0%{right: 7.6em; bottom: 35em;}
+        100%{right: 7.6em; bottom: 3em;}
+    }
+    #box2{
+        font-size: 3em;
+        position: relative;
+        top: -1.8em;
+        width: 8em;
+        padding: 10px;
+        padding-left: 25px;
+        left: -0em;
+    }
+    #box2 br{
+        content: '';
+    }
+    #menu{
+        width: 30em;
+        position: relative;
+        top: 17em;
+        letter-spacing: none;
+        padding: 0;
+        left: 11em;
+        
+    }
+    #menu ul li{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #logo{
+        position: relative;
+        top: 29em;
+        align-content: center;
+    }
+    #logo img{
+        width: 8em;
+        height: 8em;
+        position: relative;
+        left: 2em;
+        
+    }
+    #box4{
+        position: relative;
+        top: 1em;
+        width: 10em;
+        height: 6em;
+        background-color: #4e5067;
+        border-radius: 25px;
+        padding: px;
+        left: -0em;
+        margin-left: 1.1em;
+        animation-name: purbox;
+        animation-duration: 5s;
+    }
+    @keyframes purbox{
+        0%{left: -300%;}
+        100%{left: 0%;}
+    }
+    #text4{
+        border: none;
+        width: 95%;
+        font-size: .94em;
+        position: relative;
+        top: 2px;
+        text-align-last: center;
+    }
+    .ifooter{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
+        margin-top: 220%;
+    }
+    .ifooter li{
+        position: relative;
+        right: 2em;
+        font-size: .88em
+    }
 }
 
 
